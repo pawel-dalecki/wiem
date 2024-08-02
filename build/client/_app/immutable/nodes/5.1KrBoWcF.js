@@ -1,0 +1,5 @@
+import{s as m,n as i}from"../chunks/scheduler.Cs0xm5t1.js";import{S as p,i as z,e as l,s as u,c as h,g as y,a as d,b as f,d as n,f as g,h as c}from"../chunks/index.C8j-L84j.js";function k(w){let e,r=`<section class="container"><h2>Przywiązujemy szczególną uwagę do poszanowania prywatności osób, których
+      dane osobowe przetwarzamy, w tym również w związku z działalnością naszego
+      serwisu internetowego oraz działań wykonywanych lub inicjowanych drogą
+      elektroniczną.</h2> <h2>Polityka Prywatności określa w jakim celu i na jakich zasadach
+      przetwarzamy dane osobowe.</h2></section>`,s,t;return{c(){e=l("section"),e.innerHTML=r,s=u(),t=l("section"),this.h()},l(a){e=h(a,"SECTION",{class:!0,"data-svelte-h":!0}),y(e)!=="svelte-1hnsa90"&&(e.innerHTML=r),s=d(a),t=h(a,"SECTION",{}),f(t).forEach(n),this.h()},h(){g(e,"class","wrapper bg-theme-purple")},m(a,o){c(a,e,o),c(a,s,o),c(a,t,o)},p:i,i,o:i,d(a){a&&(n(e),n(s),n(t))}}}class j extends p{constructor(e){super(),z(this,e,null,k,m,{})}}export{j as component};
