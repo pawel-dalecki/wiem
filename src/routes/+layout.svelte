@@ -37,11 +37,17 @@
   header .container {
     @apply relative flex-row justify-between z-[99] items-center;
   }
+  header .container img {
+    @apply w-1/2;
+  }
+  header .container nav {
+    @apply hidden lg:flex lg:gap-2;
+  }
   header .container nav a {
     @apply p-2 px-8 bg-theme-purple-lightest hover:bg-theme-purple hover:text-theme-cyan rounded-full text-xl text-white uppercase font-bold;
   }
   :global(.wrapper) {
-    @apply relative py-12;
+    @apply relative px-4 py-12;
   }
   :global(.container) {
     @apply flex flex-col gap-2 mx-auto;

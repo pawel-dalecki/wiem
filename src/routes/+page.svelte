@@ -30,6 +30,12 @@
         " nie musisz angażowac swoich zasobów i pracowników do utrzymywaniakanałów zgłoszeń ",
     },
   ];
+  function showFaqDialog(which) {
+    document.querySelector("#faq-dialog")?.toggleAttribute("open");
+  }
+  function closeFaqDialog() {
+    document.querySelector("#faq-dialog")?.toggleAttribute("open");
+  }
   setInterval(() => {
     photo =
       photo === "magazynier"
@@ -246,6 +252,21 @@
       <p>Zajrzyj na bloga!</p>
       <img src="/img/faq.webp" />
       <button>Zobacz bloga</button>
+      <dialog id="faq-dialog" open>
+        <section>
+          <h3>Lorem ipsum dolor</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere
+            turpis ac diam scelerisque laoreet. Pellentesque in consectetur
+            nunc. Proin dictum ex non nulla porta, nec vestibulum justo blandit.
+            Proin nec vulputate sem. Suspendisse potenti. Aliquam in tincidunt
+            erat, vel lacinia felis. Nullam interdum tempor velit, ut mollis
+            erat viverra ut. Ut ut enim volutpat, tincidunt nunc sit amet,
+            mollis sapien.
+          </p>
+          <button on:click={closeFaqDialog}> </button>
+        </section>
+      </dialog>
     </section>
     <section class="faq">
       <article class="faq-picker">
@@ -402,8 +423,11 @@
           </defs>
           <g id="layer1" transform="translate(-32.543755,52.122885)">
             <g
+              on:click={() => showFaqDialog("first")}
+              on:keypress={() => showFaqDialog("first")}
+              role="button"
+              tabindex="0"
               class="shape-first"
-              onclick="hello()"
               id="g7"
               style="display: inline"
               transform="matrix(0.26458333,0,0,0.26458333,-241.66105,-2414.3757)"
@@ -467,6 +491,10 @@
               </g>
             </g>
             <g
+              on:click={() => showFaqDialog("second")}
+              on:keypress={() => showFaqDialog("second")}
+              role="button"
+              tabindex="0"
               class="shape-second"
               id="g8"
               transform="matrix(0.26458333,0,0,0.26458333,-241.66105,-2414.3757)"
@@ -528,6 +556,10 @@
               </g>
             </g>
             <g
+              on:click={() => showFaqDialog("third")}
+              on:keypress={() => showFaqDialog("third")}
+              role="button"
+              tabindex="0"
               class="shape-first"
               id="g9"
               transform="matrix(0.26458333,0,0,0.26458333,-241.66105,-2414.3757)"
@@ -594,6 +626,10 @@
               </g>
             </g>
             <g
+              on:click={() => showFaqDialog("fourth")}
+              on:keypress={() => showFaqDialog("fourth")}
+              role="button"
+              tabindex="0"
               class="shape-first"
               id="g10"
               transform="matrix(0.26458333,0,0,0.26458333,-241.66105,-2414.3757)"
@@ -663,6 +699,10 @@
             </g>
             <g
               id="g11"
+              on:click={() => showFaqDialog("fifth")}
+              on:keypress={() => showFaqDialog("fifth")}
+              role="button"
+              tabindex="0"
               class="shape-second"
               transform="matrix(0.26458333,0,0,0.26458333,-241.66105,-2414.3757)"
               style="display: inline"
@@ -774,7 +814,7 @@
   }
 
   #second-section .cards {
-    @apply grid grid-cols-4 gap-4;
+    @apply flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-4;
   }
   #second-section .cards .card {
     @apply flex flex-col gap-2;
@@ -784,7 +824,7 @@
   }
 
   #third-section .cards {
-    @apply grid grid-cols-3 gap-4 items-start;
+    @apply flex flex-col lg:grid lg:grid-cols-3 gap-4 items-start;
   }
   #third-section .cards .card {
     @apply flex flex-col rounded-3xl shadow-[2em_2em_0_0_rgba(0,0,0,0.25)];
@@ -836,13 +876,19 @@
     @apply py-0;
   }
   #sixth-section .container {
-    @apply grid grid-cols-2 gap-4;
+    @apply flex flex-col md:grid md:grid-cols-2 gap-4;
   }
   #sixth-section .container .content {
-    @apply flex flex-col gap-2 py-12;
+    @apply relative flex flex-col gap-2 my-12;
   }
   #sixth-section .container .content img {
     @apply w-1/3;
+  }
+  #sixth-section .container #faq-dialog {
+    @apply fixed inset-12 bg-theme-purple rounded-3xl max-w-2xl text-white p-12 overflow-y-scroll overflow-x-hidden z-[99];
+  }
+  #sixth-section .container #faq-dialog button {
+    @apply absolute -top-8 -right-8 rounded-full w-24 h-24 z-50;
   }
   #sixth-section .container .faq {
     @apply relative w-full mx-auto min-h-[848px];
@@ -886,7 +932,7 @@
   }
 
   #seventh-section .container {
-    @apply grid grid-cols-2 gap-4;
+    @apply flex flex-col md:grid md:grid-cols-2 gap-4;
   }
   #seventh-section .container #info {
     @apply flex flex-col gap-2;
