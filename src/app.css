@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 button {
-  @apply p-2 px-8 rounded-2xl font-bold uppercase bg-theme-cyan hover:bg-theme-yellow w-fit text-white text-2xl;
+  @apply p-2 px-8 rounded-full font-bold uppercase bg-theme-cyan hover:bg-theme-yellow w-fit text-white text-2xl;
 }

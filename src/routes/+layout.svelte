@@ -31,7 +31,6 @@
   @tailwind variants;
   @tailwind utilities;
   @tailwind components;
-
   header {
     @apply bg-white p-2;
   }
@@ -39,7 +38,7 @@
     @apply relative flex-row justify-between z-[99] items-center;
   }
   header .container nav a {
-    @apply p-2 px-8 bg-theme-purple-lightest hover:bg-theme-purple hover:text-theme-cyan rounded-3xl text-xl text-white uppercase font-bold;
+    @apply p-2 px-8 bg-theme-purple-lightest hover:bg-theme-purple hover:text-theme-cyan rounded-full text-xl text-white uppercase font-bold;
   }
   :global(.wrapper) {
     @apply relative py-12;
@@ -53,6 +52,9 @@
   :global(.bg-theme-purple h1) {
     @apply text-white;
   }
+  :global(body) {
+    font-family: Poppins, sans-serif;
+  }
   :global(h2) {
     @apply text-3xl text-theme-yellow font-black my-6;
   }
@@ -61,5 +63,14 @@
   }
   :global(p) {
     @apply my-4 text-[24px];
+  }
+  :global(form) {
+    @apply flex flex-col gap-2;
+  }
+  :global(input) {
+    @apply focus:outline-none border-8 border-transparent focus:border-theme-yellow outline-0 p-6 rounded-full;
+  }
+  :global(textarea) {
+    @apply focus:outline-none border-8 border-white focus:border-theme-yellow bg-transparent p-6 rounded-full;
   }
 </style>

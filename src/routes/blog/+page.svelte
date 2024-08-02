@@ -42,7 +42,7 @@
         </article>
       {/each}
     </section>
-    <section>
+    <section class="tools">
       <article>
         <h3>Wyszukiwarka</h3>
         <input />
@@ -53,7 +53,6 @@
       </article>
       <article>
         <h3>Wpisy</h3>
-        <input />
         <button></button>
         <button></button>
         <button></button>
@@ -75,7 +74,7 @@
   }
 
   #second-section .container {
-    @apply grid grid-cols-2 gap-8;
+    @apply grid grid-cols-2 gap-8 items-start;
   }
   #second-section .posts {
     @apply flex flex-col gap-8;
@@ -91,5 +90,18 @@
   }
   #second-section .post button {
     @apply absolute bottom-0 right-0 w-24 h-24 rounded-full;
+  }
+
+  #second-section .tools {
+    @apply flex flex-col gap-16;
+  }
+  #second-section .tools article {
+    @apply relative flex flex-col gap-4 bg-theme-purple p-12 rounded-3xl;
+  }
+  #second-section .tools article h3 {
+    @apply absolute -top-12 bg-theme-cyan text-white p-4 px-12 rounded-3xl;
+  }
+  #second-section .tools article button {
+    @apply w-full p-4 bg-transparent hover:bg-transparent border-4 border-white text-white hover:border-theme-yellow hover:text-theme-yellow;
   }
 </style>
